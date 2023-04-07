@@ -49,7 +49,7 @@ set<string> findstring(string in, string floating, int n, int count){
     }
     set<string> finalanswer;
     if(in[n] == '-'){
-        for(int i = 0; i < (int) floating.length(); i++){
+        for(int i = 0; i < (int)floating.length(); i++){
             in[n] = floating[i];
             string tempfloat = floating.substr(0,i) + floating.substr(i+1);
             set <string> temp = findstring(in, tempfloat, n + 1, count - 1);

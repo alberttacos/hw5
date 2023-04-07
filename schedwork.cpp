@@ -75,7 +75,7 @@ vector<int> workeddays
 
     int day = sched.size();
 
-    if((int) sched[day - 1].size() == (int)dailyNeed){
+    if((int)sched[day - 1].size() == (int)dailyNeed){
         vector<Worker_T> temp;
         sched.push_back(temp);
     }
