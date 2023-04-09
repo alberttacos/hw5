@@ -1,4 +1,4 @@
-#ifndef RECCHECK
+  #ifndef RECCHECK
 #include <set>
 #include <iostream>
 #include <fstream>
@@ -48,7 +48,7 @@ bool schedule(
     int days = avail.size();
     int workers = avail[0].size();
 
-    vector<int> workeddays;
+    std::vector<int> workeddays;
     for(int i = 0; i < workers; i++){
         workeddays.push_back(0);
     }
@@ -61,7 +61,7 @@ const size_t maxShifts,
 DailySchedule& sched,
 int days,
 int workers,
-vector<int> workeddays
+std::vector<int> workeddays
 ){
     if((int)sched.size() == days){
         if(sched[days - 1].size() == dailyNeed){
@@ -69,14 +69,14 @@ vector<int> workeddays
         }
     }
     if(sched.size() == 0){
-        vector<Worker_T> temp; 
+        std::vector<Worker_T> temp; 
         sched.push_back(temp);
     }
 
     int day = sched.size();
 
     if((int) sched[day - 1].size() == (int)dailyNeed){
-        vector<Worker_T> temp;
+        std::vector<Worker_T> temp;
         sched.push_back(temp);
     }
     day = sched.size();
